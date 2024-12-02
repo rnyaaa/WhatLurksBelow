@@ -4,35 +4,64 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private CharacterController character_controller;
-    public float speed = 0.1f;
-    public float sensitivity = 500f;
-    private float verticalRotation = 0f;
-    private float horizontalRotation = 0f;
-    private Vector3 gravity = new Vector3(0, -4.2f, 0);
-    private Vector3 velocity;
+    [SerializeField] Transform playerCamera = null;
+    [SerializeField] float mouseSensitivity = 3.5f;
+    [SerializeField] float walkSpeed = 3f;
+    [SerializeField] float moveSpeed = 0.95f;
+    [SerializeField] float gravity = -4f;
+    [SerializeField][Range(0f, 0.5f)] float moveSmoothTime = 0.3f;
+    [SerializeField][Range(0f, 0.5f)] float mouseSmoothTime = 0.03f;
+
+    float cameraPitch = 0f;
+    float velocityY = 0f;
+    CharacterController controller = null;
+
+    Vector2 currentDirection = Vector2.zero;
+    Vector2 currentDirectionVelocity = Vector2.zero;
+    Vector2 currentMouseDelta = Vector2.zero;
+    Vector2 currentMouseDeltaVelocity = Vector2.zero;
+
     // Start is called before the first frame update
     void Start()
     {
-        character_controller = GetComponent<CharacterController>();
+        controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        velocity = velocity + transform.forward * Input.GetAxis("Vertical");
-        velocity = velocity + transform.right * Input.GetAxis("Horizontal");
-        velocity = velocity + gravity;
-        character_controller.Move(velocity*Time.deltaTime*speed);
+        UpdateMouseLook();
+        UpdateMovement();
+    }
 
-        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+    void UpdateMouseLook()
+    {
+        Vector2 targeMouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+        currentMouseDelta = Vector2.SmoothDamp(currentMouseDelta, targeMouseDelta, ref currentMouseDeltaVelocity, mouseSmoothTime);
+        cameraPitch -= currentMouseDelta.y * mouseSensitivity;
+        cameraPitch = Mathf.Clamp(cameraPitch, -90f, 90f);
 
-        horizontalRotation += mouseX;
-        verticalRotation -= mouseY;
-        verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);
-        Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation, horizontalRotation, 0f);
-        velocity = velocity * 0.99f;
+        playerCamera.localEulerAngles = Vector3.right * cameraPitch;
+
+        transform.Rotate(Vector3.up * currentMouseDelta.x * mouseSensitivity);
+    }
+
+    void UpdateMovement()
+    {
+        Vector2 targetDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        targetDirection.Normalize();
+
+        currentDirection = Vector2.SmoothDamp(currentDirection, targetDirection, ref currentDirectionVelocity, moveSmoothTime);
+
+        if(controller.isGrounded)
+            velocityY = -1f;
+        velocityY += gravity * Time.deltaTime;
+
+        Vector3 velocity = (transform.forward * currentDirection.y + transform.right * currentDirection.x) * walkSpeed + Vector3.up * velocityY;
+        velocity *= moveSpeed;
+
+        controller.Move(velocity * Time.deltaTime);
     }
 }
