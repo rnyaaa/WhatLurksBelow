@@ -849,7 +849,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  raycastDistance: 11
+  raycastDistance: 15
   legs:
   - {fileID: 374294752}
   - {fileID: 374294751}
