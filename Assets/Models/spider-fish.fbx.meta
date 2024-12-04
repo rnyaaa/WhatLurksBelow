@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d88df3a1d1b594ed9a780351356ef156
+guid: d471ac1a05c78494ba2a93c188ffd1e6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -13,7 +13,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 1
+    optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
@@ -24,49 +24,12 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
-    extraExposedTransformPaths:
-    - Head
-    - LeftLeg1_Seg1
-    - LeftLeg1_Seg1/LeftLeg1_Seg2
-    - LeftLeg1_Seg1/LeftLeg1_Seg2/LeftLeg1_Foot
-    - LeftLeg2_Seg1
-    - LeftLeg2_Seg1/LeftLeg2_Seg2
-    - LeftLeg2_Seg1/LeftLeg2_Seg2/LeftLeg2_Foot
-    - LeftLeg3_Seg1
-    - LeftLeg3_Seg1/LeftLeg3_Seg2
-    - LeftLeg3_Seg1/LeftLeg3_Seg2/LeftLeg3_Foot
-    - LeftLeg4_Seg1
-    - LeftLeg4_Seg1/LeftLeg4_Seg2
-    - LeftLeg4_Seg1/LeftLeg4_Seg2/LeftLeg4_Foot
-    - LeftLeg5_Seg1
-    - LeftLeg5_Seg1/LeftLeg5_Seg2
-    - LeftLeg5_Seg1/LeftLeg5_Seg2/LeftLeg5_Foot
-    - LeftLeg6_Seg1
-    - LeftLeg6_Seg1/LeftLeg6_Seg2
-    - LeftLeg6_Seg1/LeftLeg6_Seg2/LeftLeg6_Foot
-    - RightLeg1_Seg1
-    - RightLeg1_Seg1/RightLeg1_Seg2
-    - RightLeg1_Seg1/RightLeg1_Seg2/RightLeg1_Foot
-    - RightLeg2_Seg1
-    - RightLeg2_Seg1/RightLeg2_Seg2
-    - RightLeg2_Seg1/RightLeg2_Seg2/RightLeg2_Foot
-    - RightLeg3_Seg1
-    - RightLeg3_Seg1/RightLeg3_Seg2
-    - RightLeg3_Seg1/RightLeg3_Seg2/RightLeg3_Foot
-    - RightLeg4_Seg1
-    - RightLeg4_Seg1/RightLeg4_Seg2
-    - RightLeg4_Seg1/RightLeg4_Seg2/RightLeg4_Foot
-    - RightLeg5_Seg1
-    - RightLeg5_Seg1/RightLeg5_Seg2
-    - RightLeg5_Seg1/RightLeg5_Seg2/RightLeg5_Foot
-    - RightLeg6_Seg1
-    - RightLeg6_Seg1/RightLeg6_Seg2
-    - RightLeg6_Seg1/RightLeg6_Seg2/RightLeg6_Foot
+    extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
     isReadable: 0
@@ -128,15 +91,15 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: Head
+    rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

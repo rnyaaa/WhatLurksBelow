@@ -33,14 +33,6 @@ public class Inverse_Kinematics : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-        {
-            Debug.Log("Animator is in Idle state!");
-        }
-    }
-
     void OnAnimatorIK(int layerIndex)
     {
         Debug.Log("ATTEMPTING ANIMATING");
@@ -73,6 +65,8 @@ public class Inverse_Kinematics : MonoBehaviour
                         animator.SetIKPosition(AvatarIKGoal.LeftFoot + i, initialPositions[i]);
                     }
                 }
+
+                Debug.Log("RAYCAST MISS");
             }
         }
     }
