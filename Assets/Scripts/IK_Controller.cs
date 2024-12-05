@@ -73,9 +73,26 @@ public class SpiderIndividualizedLocomotion : MonoBehaviour
                 // Initialize movement
                 leg.isMoving = true;
                 leg.startPosition = leg.target.position;
-                leg.targetPosition = new Vector3(leg.hint.position.x, 0, leg.hint.position.z);
+
+                // Perform a raycast down from the hint position onto the terrain
+                LayerMask terrainLayer = LayerMask.GetMask("Terrain");
+                RaycastHit hit;
+
+                // Default target position at hint's XZ coordinates
+                Vector3 targetXZ = new Vector3(leg.hint.position.x, 0, leg.hint.position.z);
+
+                if (Physics.Raycast(leg.hint.position + Vector3.up * 10f, Vector3.down, out hit, Mathf.Infinity, terrainLayer))
+                {
+                    // Use the Y position from the raycast hit
+                    leg.targetPosition = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+                }
+                else
+                {
+                    // Fallback: if no terrain is hit, keep Y at 0
+                    leg.targetPosition = targetXZ;
+                }
+
                 leg.movementProgress = 0;
-                
                 // Reset delay for next movement
                 leg.movementDelay = Random.Range(0f, maxIndividualDelay);
 

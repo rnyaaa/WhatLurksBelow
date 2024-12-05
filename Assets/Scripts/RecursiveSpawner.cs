@@ -84,7 +84,6 @@ public class RecursiveSpawner : MonoBehaviour
         // Smoothly rotate to match parent's rotation
         transform.rotation = Quaternion.Lerp(transform.rotation, parentSegment.transform.rotation, Time.deltaTime * followSpeed);
     }
-
     private void MoveRandomly()
     {
         // Update the timer for direction change
@@ -95,13 +94,22 @@ public class RecursiveSpawner : MonoBehaviour
             ChangeDirection();
             changeDirectionTimer = 0f;
         }
-        
-        if(transform.position.y < 3)
+
+        // Raycast setup for terrain height check
+        LayerMask terrainLayer = LayerMask.GetMask("Terrain");
+        RaycastHit hit;
+
+        // Raycast downward to check the distance to the "Terrain" layer
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity, terrainLayer))
         {
-            targetDirection.y = 1f;
-        } else if (transform.position.y > 10)
-        {
-            targetDirection.y = -1f;
+            if (hit.distance < 3f) // Close to terrain
+            {
+                targetDirection.y = 1f; // Move upward
+            }
+            else if (hit.distance > 10f) // High altitude
+            {
+                targetDirection.y = -1f; // Move downward
+            }
         }
 
         // Smoothly rotate and move in the random direction
@@ -109,6 +117,7 @@ public class RecursiveSpawner : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * maxTurnSpeed);
         transform.position += transform.forward * movementSpeed * Time.deltaTime;
     }
+
 
     private void ChangeDirection()
     {
