@@ -1,20 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FlashlightController : MonoBehaviour
 {
     public Light flashlight;
-    // Start is called before the first frame update
+    public bool isOn; // Track whether the flashlight is on or off
+
     void Start()
     {
         flashlight = GetComponent<Light>();
+        isOn = flashlight.enabled; // Initialize state
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("f"))
-            flashlight.enabled = !flashlight.enabled;
+        if (Input.GetKeyDown("f"))
+        {
+            isOn = !isOn; // Toggle state
+            flashlight.enabled = isOn; // Update the flashlight
+        }
     }
 }
