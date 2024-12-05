@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField][Range(0f, 0.5f)] float moveSmoothTime = 0.3f;
     [SerializeField][Range(0f, 0.5f)] float mouseSmoothTime = 0.03f;
 
+    bool isWalking = false;
     float cameraPitch = 0f;
     float velocityY = 0f;
     CharacterController controller = null;
@@ -45,6 +47,10 @@ public class Player : MonoBehaviour
         cameraPitch -= currentMouseDelta.y * mouseSensitivity;
         cameraPitch = Mathf.Clamp(cameraPitch, -70f, 70f);
 
+        if(isWalking)
+            if(!footstepsSound.isPlaying)
+                footstepsSound.Play();
+
         playerCamera.localEulerAngles = Vector3.right * cameraPitch;
 
         transform.Rotate(Vector3.up * currentMouseDelta.x * mouseSensitivity);
@@ -55,10 +61,7 @@ public class Player : MonoBehaviour
         Vector2 targetDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         targetDirection.Normalize();
 
-        if(targetDirection.x == 0 && targetDirection.y == 0)
-            footstepsSound.enabled = false;
-        else
-            footstepsSound.enabled = true;
+        isWalking = targetDirection.x != 0 || targetDirection.y != 0;
 
         currentDirection = Vector2.SmoothDamp(currentDirection, targetDirection, ref currentDirectionVelocity, moveSmoothTime);
 
