@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
+
+    public AudioSource wanderingAudio; // AudioSource for wandering
+    public AudioSource nearbyAudio;    // AudioSource for nearby
+    public AudioSource chasingAudio;   // AudioSource for chasing
+
     public Light targetLight;
     public float intensityThreshold = 5f;
     public float detectionRange = 10f;
+    public float nearbyRange = 20f;
     public float moveSpeed = 3f;
 
     public Transform[] waypoints;
@@ -20,12 +26,36 @@ public class EnemyBehavior : MonoBehaviour
     private Vector3 direction;
     private Vector3 velocity = new Vector3(0, 0, 0);
     private Vector3 lastValidDirection;
+    private bool isChasing = false;
+
+    // AUDIO
+    public float fadeSpeed = 2f;       // Speed for fading audio
+
+    private enum AudioState { Wandering, Nearby, Chasing }
+    private AudioState currentState = AudioState.Wandering;
+
+    void Start()
+    {
+        // Ensure only the wandering audio is initially playing
+        wanderingAudio.loop = true;
+        nearbyAudio.loop = true;
+        chasingAudio.loop = true;
+
+        wanderingAudio.volume = 1f;
+        nearbyAudio.volume = 0f;
+        chasingAudio.volume = 0f;
+
+        wanderingAudio.Play();
+        nearbyAudio.Play();
+        chasingAudio.Play();
+    }
 
     void Update()
     {
         if (targetLight.enabled == true)
         {
             direction = (targetLight.transform.position - enemy.transform.position).normalized;
+            isChasing = true;
 
             if (CheckRayToTarget())
             {
@@ -45,8 +75,37 @@ public class EnemyBehavior : MonoBehaviour
         }
         else
         {
+            isChasing = false;
             MoveThroughWaypoints();
         }
+
+
+        // Calculate distance to player
+        float distanceToPlayer = Vector3.Distance(enemy.transform.position, targetLight.transform.position);
+
+        // Determine the desired audio state
+        AudioState desiredState = AudioState.Wandering;
+
+        if (isChasing)
+        {
+            desiredState = AudioState.Chasing;
+        }
+        else if (distanceToPlayer <= nearbyRange)
+        {
+            desiredState = AudioState.Nearby;
+        } else 
+        {
+            desiredState = AudioState.Wandering;
+        }
+
+        // Handle state transitions
+        if (desiredState != currentState)
+        {
+            currentState = desiredState;
+        }
+
+        // Fade audio based on the current state
+        FadeAudio();
     }
 
     bool CheckRayToTarget()
@@ -164,6 +223,29 @@ public class EnemyBehavior : MonoBehaviour
             {
                 MoveToward(directionWP);
             }
+        }
+    }
+    private void FadeAudio()
+    {
+        switch (currentState)
+        {
+            case AudioState.Wandering:
+                wanderingAudio.volume = Mathf.Lerp(wanderingAudio.volume, 1f, Time.deltaTime * fadeSpeed);
+                nearbyAudio.volume = Mathf.Lerp(nearbyAudio.volume, 0f, Time.deltaTime * fadeSpeed);
+                chasingAudio.volume = Mathf.Lerp(chasingAudio.volume, 0f, Time.deltaTime * fadeSpeed);
+                break;
+
+            case AudioState.Nearby:
+                wanderingAudio.volume = Mathf.Lerp(wanderingAudio.volume, 0f, Time.deltaTime * fadeSpeed);
+                nearbyAudio.volume = Mathf.Lerp(nearbyAudio.volume, 1f, Time.deltaTime * fadeSpeed);
+                chasingAudio.volume = Mathf.Lerp(chasingAudio.volume, 0f, Time.deltaTime * fadeSpeed);
+                break;
+
+            case AudioState.Chasing:
+                wanderingAudio.volume = Mathf.Lerp(wanderingAudio.volume, 0f, Time.deltaTime * fadeSpeed);
+                nearbyAudio.volume = Mathf.Lerp(nearbyAudio.volume, 0f, Time.deltaTime * fadeSpeed);
+                chasingAudio.volume = Mathf.Lerp(chasingAudio.volume, 1f, Time.deltaTime * fadeSpeed);
+                break;
         }
     }
 }
