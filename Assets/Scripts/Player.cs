@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     Vector2 currentMouseDelta = Vector2.zero;
     Vector2 currentMouseDeltaVelocity = Vector2.zero;
 
+    public AudioSource footstepsSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +43,7 @@ public class Player : MonoBehaviour
         Vector2 targeMouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         currentMouseDelta = Vector2.SmoothDamp(currentMouseDelta, targeMouseDelta, ref currentMouseDeltaVelocity, mouseSmoothTime);
         cameraPitch -= currentMouseDelta.y * mouseSensitivity;
-        cameraPitch = Mathf.Clamp(cameraPitch, -90f, 90f);
+        cameraPitch = Mathf.Clamp(cameraPitch, -70f, 70f);
 
         playerCamera.localEulerAngles = Vector3.right * cameraPitch;
 
@@ -52,6 +54,11 @@ public class Player : MonoBehaviour
     {
         Vector2 targetDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         targetDirection.Normalize();
+
+        if(targetDirection.x == 0 && targetDirection.y == 0)
+            footstepsSound.enabled = false;
+        else
+            footstepsSound.enabled = true;
 
         currentDirection = Vector2.SmoothDamp(currentDirection, targetDirection, ref currentDirectionVelocity, moveSmoothTime);
 
