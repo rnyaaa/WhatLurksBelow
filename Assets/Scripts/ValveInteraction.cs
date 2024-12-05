@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ValveInteraction : MonoBehaviour
 {
-    bool playerInRange = false;
-    bool taskComplete = false;
-    float speed = 2f;
-    public Text interactionText;
+    [SerializeField] private float range = 10f;
+    [SerializeField] private Text interactionText;
+    private bool inRange = false;
 
     void Start()
     {
@@ -19,27 +17,33 @@ public class ValveInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerInRange && Input.GetKeyDown("e") && !taskComplete)
+        if(inRange && Input.GetKeyDown("e"))
         {
-            transform.Rotate(Vector3.up, speed * Time.deltaTime);
-            taskComplete = true;
-        } 
+            FixValve();
+        }
     }
 
-    private void OnTriggerEnter(Collider other)
+    void FixValve()
     {
-        if(other.tag == "player" && !taskComplete) 
+        transform.Rotate(Vector3.up, 90f, Space.Self);
+        interactionText.gameObject.SetActive(false);
+        inRange = false;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
         {
-            playerInRange = true;
+            inRange = true;
             interactionText.gameObject.SetActive(true);
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
-        if(other.tag == "player") 
+        if(other.tag == "Player")
         {
-            playerInRange = false;
+            inRange = false;
             interactionText.gameObject.SetActive(false);
         }
     }
