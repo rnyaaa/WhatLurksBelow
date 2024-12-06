@@ -5,47 +5,55 @@ using UnityEngine.UI;
 
 public class ValveInteraction : MonoBehaviour
 {
-    [SerializeField] private float range = 10f;
+    public GameObject player;
+    public float range;
     [SerializeField] private Text interactionText;
-    private bool inRange = false;
+    public bool finished = false;
+    public float rotationSpeed = 2f;
 
-    void Start()
-    {
-        interactionText.gameObject.SetActive(false);
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if(inRange && Input.GetKeyDown("e"))
+        if ((player.transform.position - transform.position).magnitude < range)
         {
-            FixValve();
+            if (!finished)
+            {
+                interactionText.gameObject.SetActive(true);
+
+                if (Input.GetKeyDown("e"))
+                {
+                    interactionText.gameObject.SetActive(false);
+                    finished = true;
+                    FixValve();
+                }
+            }
         }
-    }
-
-    void FixValve()
-    {
-        transform.Rotate(Vector3.up, 90f, Space.Self);
-        interactionText.gameObject.SetActive(false);
-        inRange = false;
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player")
+        else
         {
-            inRange = true;
-            interactionText.gameObject.SetActive(true);
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if(other.tag == "Player")
-        {
-            inRange = false;
             interactionText.gameObject.SetActive(false);
         }
     }
 
+
+    void FixValve()
+    {
+        StartCoroutine(RotateValve());
+    }
+
+    private IEnumerator RotateValve()   
+    {
+        float targetAngle = transform.localEulerAngles.z + 90f;
+        float currentAngle = transform.localEulerAngles.z;
+        float elapsedTime = 0f;
+        float duration = Mathf.Abs(90f / rotationSpeed);
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float angle = Mathf.Lerp(currentAngle, targetAngle, elapsedTime / duration);
+            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, angle);
+            yield return null;
+        }
+
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, targetAngle);
+    }
 }

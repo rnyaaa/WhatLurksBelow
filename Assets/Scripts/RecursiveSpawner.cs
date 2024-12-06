@@ -58,7 +58,7 @@ public class RecursiveSpawner : MonoBehaviour
         // Instantiate the segment
         GameObject spawnedModel = Instantiate(model, spawnPosition, transform.rotation);
         spawnedModel.transform.localScale = newScale;
-
+        spawnedModel.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
         // Add this script to the spawned segment
         RecursiveSpawner spawner = spawnedModel.AddComponent<RecursiveSpawner>();
         spawner.modelToSpawn = modelToSpawn;

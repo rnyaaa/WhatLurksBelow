@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a3120239d89704da18386d8d02b4c3a3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.906321
+      value: 6.137497
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a3120239d89704da18386d8d02b4c3a3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.02
+      value: 20.564268
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a3120239d89704da18386d8d02b4c3a3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.228947
+      value: -107.20795
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a3120239d89704da18386d8d02b4c3a3,
         type: 3}
@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a3120239d89704da18386d8d02b4c3a3,
         type: 3}
       propertyPath: m_Name
-      value: whipper_head (1)
+      value: fish_with_tail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -98,7 +98,7 @@ MonoBehaviour:
   scaleMultiplier: 0.85
   followSpeed: 10
   offsetDistance: 0.225
-  movementSpeed: 0.5
+  movementSpeed: 2
   changeDirectionInterval: 3
   maxTurnSpeed: 2
   isTail: 0

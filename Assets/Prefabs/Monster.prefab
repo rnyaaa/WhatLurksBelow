@@ -123,17 +123,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f90237f2958db4ac690bce1d395fe0a4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 229.27617
+      value: 89.42014
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f90237f2958db4ac690bce1d395fe0a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.44
+      value: 51.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f90237f2958db4ac690bce1d395fe0a4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 117.70083
+      value: -89.69423
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f90237f2958db4ac690bce1d395fe0a4,
         type: 3}
@@ -170,6 +170,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f90237f2958db4ac690bce1d395fe0a4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6f32841731dd0402f99fd27089ab60e7, type: 2}
     - target: {fileID: 919132149155446097, guid: f90237f2958db4ac690bce1d395fe0a4,
         type: 3}
       propertyPath: m_Name
@@ -240,9 +245,9 @@ MonoBehaviour:
   scaleMultiplier: 0.95
   followSpeed: 10
   offsetDistance: 0.675
-  movementSpeed: 5
+  movementSpeed: 0
   changeDirectionInterval: 5
-  maxTurnSpeed: 3
+  maxTurnSpeed: 0
   isTail: 0
 --- !u!114 &8686262434823251125
 MonoBehaviour:
@@ -261,10 +266,11 @@ MonoBehaviour:
   chasingAudio: {fileID: 3924373543053193097}
   targetLight: {fileID: 0}
   intensityThreshold: 5
-  detectionRange: 10
-  nearbyRange: 20
+  detectionRange: 50
+  nearbyRange: 100
   moveSpeed: 0.1
   waypoints:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -297,7 +303,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -313,6 +319,24 @@ AudioSource:
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.13097644
+      value: 0.2462562
+      inSlope: -2.4350793
+      outSlope: -2.4350793
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.6543184
+    - serializedVersion: 3
+      time: 0.31548023
+      value: 0
+      inSlope: -0.012675902
+      outSlope: -0.012675902
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.28943676
     - serializedVersion: 3
       time: 1
       value: 0
@@ -393,7 +417,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -401,22 +425,31 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.002
+      value: 0.99497604
+      inSlope: -0.09554034
+      outSlope: -0.09554034
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 1
     - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      time: 0.06795818
+      value: 0.4014569
+      inSlope: -9.765754
+      outSlope: -9.765754
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
+      outWeight: 0.1751151
+    - serializedVersion: 3
+      time: 0.20431736
+      value: 0
+      inSlope: 0.13018204
+      outSlope: 0.13018204
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
       outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -440,8 +473,8 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 0.18611111
+      time: 0.07823181
+      value: 0.19113125
       inSlope: 0
       outSlope: 0
       tangentMode: 0

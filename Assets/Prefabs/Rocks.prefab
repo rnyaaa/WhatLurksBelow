@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3689583055682127471}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,6 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5939375406320012348}
   - {fileID: 1287400827928891767}
   - {fileID: 6994712437083814701}
   - {fileID: 3622027332900863822}
@@ -129,10 +130,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 997528d8eec8e47658f13ce2c454683b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 997528d8eec8e47658f13ce2c454683b,
         type: 3}
       propertyPath: m_Name
       value: tall_rocks_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 997528d8eec8e47658f13ce2c454683b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -203,10 +214,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -101.44
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 02c6588ef6ff9444a82c84a0d0256d82,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 02c6588ef6ff9444a82c84a0d0256d82,
         type: 3}
       propertyPath: m_Name
       value: tall_rocks_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02c6588ef6ff9444a82c84a0d0256d82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -277,10 +298,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 997528d8eec8e47658f13ce2c454683b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 997528d8eec8e47658f13ce2c454683b,
         type: 3}
       propertyPath: m_Name
       value: tall_rocks_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 997528d8eec8e47658f13ce2c454683b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -351,10 +382,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c0e1fe8bd1c0a4cbab6d680eeb01ddc8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: c0e1fe8bd1c0a4cbab6d680eeb01ddc8,
         type: 3}
       propertyPath: m_Name
       value: large_rock_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c0e1fe8bd1c0a4cbab6d680eeb01ddc8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -425,10 +466,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 166.364
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5044b5d2dde9a4ccba1eb76f194ae13f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 5044b5d2dde9a4ccba1eb76f194ae13f,
         type: 3}
       propertyPath: m_Name
       value: small_rock_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5044b5d2dde9a4ccba1eb76f194ae13f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -499,10 +550,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7daa7bfcd784e463ea18958866a42e2a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 7daa7bfcd784e463ea18958866a42e2a,
         type: 3}
       propertyPath: m_Name
       value: small_rock_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7daa7bfcd784e463ea18958866a42e2a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -573,10 +634,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5044b5d2dde9a4ccba1eb76f194ae13f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 5044b5d2dde9a4ccba1eb76f194ae13f,
         type: 3}
       propertyPath: m_Name
       value: small_rock_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5044b5d2dde9a4ccba1eb76f194ae13f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -647,10 +718,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7daa7bfcd784e463ea18958866a42e2a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 7daa7bfcd784e463ea18958866a42e2a,
         type: 3}
       propertyPath: m_Name
       value: small_rock_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7daa7bfcd784e463ea18958866a42e2a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -721,10 +802,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5044b5d2dde9a4ccba1eb76f194ae13f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 5044b5d2dde9a4ccba1eb76f194ae13f,
         type: 3}
       propertyPath: m_Name
       value: small_rock_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5044b5d2dde9a4ccba1eb76f194ae13f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -800,10 +891,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7e933351cb57441918c0917c754327ec,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 7e933351cb57441918c0917c754327ec,
         type: 3}
       propertyPath: m_Name
       value: rubble_rocks_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7e933351cb57441918c0917c754327ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -874,10 +975,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f065e93b8afb149f08a899e0412957eb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: f065e93b8afb149f08a899e0412957eb,
         type: 3}
       propertyPath: m_Name
       value: large_rock_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f065e93b8afb149f08a899e0412957eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -948,10 +1059,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
         type: 3}
       propertyPath: m_Name
       value: rubble_rocks_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1022,10 +1143,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7e933351cb57441918c0917c754327ec,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 7e933351cb57441918c0917c754327ec,
         type: 3}
       propertyPath: m_Name
       value: rubble_rocks_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7e933351cb57441918c0917c754327ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1096,10 +1227,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -81.752
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 997528d8eec8e47658f13ce2c454683b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 997528d8eec8e47658f13ce2c454683b,
         type: 3}
       propertyPath: m_Name
       value: tall_rocks_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 997528d8eec8e47658f13ce2c454683b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1170,10 +1311,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
         type: 3}
       propertyPath: m_Name
       value: rubble_rocks_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1244,10 +1395,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: de4d795e5d0314089ab438f0543b3882,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: de4d795e5d0314089ab438f0543b3882,
         type: 3}
       propertyPath: m_Name
       value: rubble_rocks_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de4d795e5d0314089ab438f0543b3882,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1318,10 +1479,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c0e1fe8bd1c0a4cbab6d680eeb01ddc8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: c0e1fe8bd1c0a4cbab6d680eeb01ddc8,
         type: 3}
       propertyPath: m_Name
       value: large_rock_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c0e1fe8bd1c0a4cbab6d680eeb01ddc8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1392,10 +1563,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: de4d795e5d0314089ab438f0543b3882,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: de4d795e5d0314089ab438f0543b3882,
         type: 3}
       propertyPath: m_Name
       value: rubble_rocks_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de4d795e5d0314089ab438f0543b3882,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1466,10 +1647,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f065e93b8afb149f08a899e0412957eb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: f065e93b8afb149f08a899e0412957eb,
         type: 3}
       propertyPath: m_Name
       value: large_rock_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f065e93b8afb149f08a899e0412957eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1540,10 +1731,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
         type: 3}
       propertyPath: m_Name
       value: rubble_rocks_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1614,10 +1815,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -48.946
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
         type: 3}
       propertyPath: m_Name
       value: rubble_rocks_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1693,10 +1904,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 997528d8eec8e47658f13ce2c454683b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 997528d8eec8e47658f13ce2c454683b,
         type: 3}
       propertyPath: m_Name
       value: tall_rocks_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 997528d8eec8e47658f13ce2c454683b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1767,10 +1988,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c0e1fe8bd1c0a4cbab6d680eeb01ddc8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: c0e1fe8bd1c0a4cbab6d680eeb01ddc8,
         type: 3}
       propertyPath: m_Name
       value: large_rock_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c0e1fe8bd1c0a4cbab6d680eeb01ddc8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1851,10 +2082,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 997528d8eec8e47658f13ce2c454683b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 997528d8eec8e47658f13ce2c454683b,
         type: 3}
       propertyPath: m_Name
       value: tall_rocks_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 997528d8eec8e47658f13ce2c454683b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1925,10 +2166,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f065e93b8afb149f08a899e0412957eb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: f065e93b8afb149f08a899e0412957eb,
         type: 3}
       propertyPath: m_Name
       value: large_rock_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f065e93b8afb149f08a899e0412957eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1999,10 +2250,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -51.06
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
         type: 3}
       propertyPath: m_Name
       value: rubble_rocks_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2014,6 +2275,105 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
     type: 3}
   m_PrefabInstance: {fileID: 5847235605879135808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6189739241935219671
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3689583055682127471}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 199.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 200.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 199.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 126.63
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 29.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -38.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.41470018
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.41455546
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.57288593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.572686
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -89.98
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -251.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
+    - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Name
+      value: rubble_rocks_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 84126d4ccc81547ba98f8c03690d623c, type: 3}
+--- !u!4 &5939375406320012348 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 84126d4ccc81547ba98f8c03690d623c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6189739241935219671}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6350452419084655528
 PrefabInstance:
@@ -2073,10 +2433,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
         type: 3}
       propertyPath: m_Name
       value: rubble_rocks_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2147,10 +2517,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7e933351cb57441918c0917c754327ec,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 7e933351cb57441918c0917c754327ec,
         type: 3}
       propertyPath: m_Name
       value: rubble_rocks_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7e933351cb57441918c0917c754327ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2221,10 +2601,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -129.612
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
         type: 3}
       propertyPath: m_Name
       value: rubble_rocks_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 84126d4ccc81547ba98f8c03690d623c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2295,10 +2685,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5044b5d2dde9a4ccba1eb76f194ae13f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 5044b5d2dde9a4ccba1eb76f194ae13f,
         type: 3}
       propertyPath: m_Name
       value: small_rock_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5044b5d2dde9a4ccba1eb76f194ae13f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2369,10 +2769,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -21.385
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fa8587f495ebd41c38120a821194f4ea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: fa8587f495ebd41c38120a821194f4ea,
         type: 3}
       propertyPath: m_Name
       value: large_rock_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa8587f495ebd41c38120a821194f4ea,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2443,10 +2853,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fa8587f495ebd41c38120a821194f4ea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: fa8587f495ebd41c38120a821194f4ea,
         type: 3}
       propertyPath: m_Name
       value: large_rock_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa8587f495ebd41c38120a821194f4ea,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2517,10 +2937,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 76.137
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: de4d795e5d0314089ab438f0543b3882,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: de4d795e5d0314089ab438f0543b3882,
         type: 3}
       propertyPath: m_Name
       value: rubble_rocks_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de4d795e5d0314089ab438f0543b3882,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2591,10 +3021,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c0e1fe8bd1c0a4cbab6d680eeb01ddc8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: c0e1fe8bd1c0a4cbab6d680eeb01ddc8,
         type: 3}
       propertyPath: m_Name
       value: large_rock_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c0e1fe8bd1c0a4cbab6d680eeb01ddc8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2665,10 +3105,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7daa7bfcd784e463ea18958866a42e2a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 298f29666eb3b460a87c3666be89dece, type: 2}
     - target: {fileID: 919132149155446097, guid: 7daa7bfcd784e463ea18958866a42e2a,
         type: 3}
       propertyPath: m_Name
       value: small_rock_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7daa7bfcd784e463ea18958866a42e2a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

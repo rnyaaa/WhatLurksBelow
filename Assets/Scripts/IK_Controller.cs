@@ -15,6 +15,7 @@ public class SpiderIndividualizedLocomotion : MonoBehaviour
     }
 
     public LegConfig[] legs;
+    private float[] hint_starts;
     
     [Header("Movement Parameters")]
     public float legMoveThreshold = 0.5f;
@@ -30,6 +31,10 @@ public class SpiderIndividualizedLocomotion : MonoBehaviour
         foreach (var leg in legs)
         {
             leg.movementDelay = Random.Range(0f, maxIndividualDelay);
+        }
+        for (int i = 0; i < legs.Length; i++)
+        {
+            hint_starts[i] = legs[i].hint.transform.position.y;
         }
     }
 
@@ -85,6 +90,7 @@ public class SpiderIndividualizedLocomotion : MonoBehaviour
                 {
                     // Use the Y position from the raycast hit
                     leg.targetPosition = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+                    //leg.hint.transform.position = new Vector3(leg.hint.transform.position.x, hint_starts[i] + hit.point.y, leg.hint.transform.position.z);
                 }
                 else
                 {
@@ -108,6 +114,7 @@ public class SpiderIndividualizedLocomotion : MonoBehaviour
                 // Calculate arc movement
                 float t = leg.movementProgress;
                 Vector3 currentPos = Vector3.Lerp(leg.startPosition, leg.targetPosition, t);
+                //Vector3 hintcurrPos= Vector3.Lerp(leg.hint.position, )
                 
                 // Add vertical lift
                 currentPos.y += Mathf.Sin(t * Mathf.PI) * legLiftHeight;

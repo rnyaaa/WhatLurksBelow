@@ -52,7 +52,7 @@ public class EnemyBehavior : MonoBehaviour
 
     void Update()
     {
-        if (targetLight.enabled == true)
+        if (targetLight.enabled == true && (targetLight.transform.position - enemy.transform.position).magnitude < detectionRange)
         {
             direction = (targetLight.transform.position - enemy.transform.position).normalized;
             isChasing = true;
@@ -79,11 +79,8 @@ public class EnemyBehavior : MonoBehaviour
             MoveThroughWaypoints();
         }
 
-
-        // Calculate distance to player
         float distanceToPlayer = Vector3.Distance(enemy.transform.position, targetLight.transform.position);
 
-        // Determine the desired audio state
         AudioState desiredState = AudioState.Wandering;
 
         if (isChasing)
@@ -98,13 +95,11 @@ public class EnemyBehavior : MonoBehaviour
             desiredState = AudioState.Wandering;
         }
 
-        // Handle state transitions
         if (desiredState != currentState)
         {
             currentState = desiredState;
         }
 
-        // Fade audio based on the current state
         FadeAudio();
     }
 
