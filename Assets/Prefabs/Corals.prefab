@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3822695142496588798
 Transform:
@@ -60,46 +60,46 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7852453264775884041}
-  - {fileID: 8180619698572659291}
-  - {fileID: 189046429654961838}
-  - {fileID: 916645501510700153}
   - {fileID: 7649486455853190420}
-  - {fileID: 5511742996924447090}
-  - {fileID: 2536123662330020028}
-  - {fileID: 7941908808560131481}
-  - {fileID: 765018723959563263}
-  - {fileID: 5994108949690557675}
+  - {fileID: 916645501510700153}
+  - {fileID: 189046429654961838}
   - {fileID: 4927015283602961551}
   - {fileID: 269562492177675520}
   - {fileID: 777261996621035396}
-  - {fileID: 6870355315684470835}
-  - {fileID: 6402498441990297437}
-  - {fileID: 6598340140950762025}
-  - {fileID: 3280206648928510528}
   - {fileID: 5495500888234036238}
+  - {fileID: 1747318085433508486}
+  - {fileID: 991384561162319713}
+  - {fileID: 2441040159018162487}
+  - {fileID: 7852453264775884041}
+  - {fileID: 8180619698572659291}
+  - {fileID: 7941908808560131481}
+  - {fileID: 765018723959563263}
+  - {fileID: 5994108949690557675}
   - {fileID: 3822695142496588798}
-  - {fileID: 7149867562144005817}
   - {fileID: 4339311077269732417}
   - {fileID: 6524431419838940025}
-  - {fileID: 1257101573774904519}
-  - {fileID: 1747318085433508486}
-  - {fileID: 7679313854990470848}
   - {fileID: 8241666771674161846}
   - {fileID: 6799659975978541860}
   - {fileID: 6922648549430671055}
   - {fileID: 410608386153208718}
   - {fileID: 430048895557758597}
   - {fileID: 8147574775949060014}
+  - {fileID: 794893886166119171}
+  - {fileID: 4076564373717240779}
+  - {fileID: 5511742996924447090}
+  - {fileID: 2536123662330020028}
+  - {fileID: 6870355315684470835}
+  - {fileID: 7679313854990470848}
   - {fileID: 3654825163710575895}
+  - {fileID: 1257101573774904519}
+  - {fileID: 6402498441990297437}
+  - {fileID: 6598340140950762025}
+  - {fileID: 3280206648928510528}
+  - {fileID: 7149867562144005817}
   - {fileID: 5794036892620189572}
   - {fileID: 7929851301469328973}
   - {fileID: 7490593638185378769}
-  - {fileID: 2441040159018162487}
   - {fileID: 4286644495334212556}
-  - {fileID: 794893886166119171}
-  - {fileID: 991384561162319713}
-  - {fileID: 4076564373717240779}
   - {fileID: 6411180225283102556}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -165,6 +165,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pointy_coral (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2124e9269285c478a823d85cd6f08a3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -239,6 +244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pointy_coral (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2124e9269285c478a823d85cd6f08a3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -319,6 +329,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6551566260037408089, guid: 4f720cf350a50418eb7785329f9c4224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -397,6 +412,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2124e9269285c478a823d85cd6f08a3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -477,6 +497,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2028732877229510350, guid: aac33987762e04789856f53aab95d467,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -555,6 +580,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028732877229510350, guid: aac33987762e04789856f53aab95d467,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -635,6 +665,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: coral_thick
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9f6847b85dc2c45e6bb5e4cc41e7fbd5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -708,6 +743,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: crab_coral (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028732877229510350, guid: aac33987762e04789856f53aab95d467,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -788,6 +828,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2028732877229510350, guid: aac33987762e04789856f53aab95d467,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -867,6 +912,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2028732877229510350, guid: aac33987762e04789856f53aab95d467,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -890,6 +940,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: blubby_coral (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403094617466047253, guid: 5474c4c37342742c2a3b03348ed95964,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2676143982886877446, guid: 5474c4c37342742c2a3b03348ed95964,
         type: 3}
@@ -1025,6 +1080,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: crab_coral
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a82b406ec60ce40eb8228574877f836e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1103,6 +1163,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551566260037408089, guid: 4f720cf350a50418eb7785329f9c4224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1192,6 +1257,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be044ddd4e558458c9be7aeaab4202b4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1287,6 +1357,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9f6847b85dc2c45e6bb5e4cc41e7fbd5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1381,6 +1456,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: basic_coral (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be044ddd4e558458c9be7aeaab4202b4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1470,6 +1550,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: crab_coral (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2028732877229510350, guid: aac33987762e04789856f53aab95d467,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1549,6 +1634,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6551566260037408089, guid: 4f720cf350a50418eb7785329f9c4224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1572,6 +1662,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: blubby_coral (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403094617466047253, guid: 5474c4c37342742c2a3b03348ed95964,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2676143982886877446, guid: 5474c4c37342742c2a3b03348ed95964,
         type: 3}
@@ -1646,6 +1741,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: blubby_coral
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403094617466047253, guid: 5474c4c37342742c2a3b03348ed95964,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2676143982886877446, guid: 5474c4c37342742c2a3b03348ed95964,
         type: 3}
@@ -1786,6 +1886,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be044ddd4e558458c9be7aeaab4202b4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1864,6 +1969,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028732877229510350, guid: aac33987762e04789856f53aab95d467,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1944,6 +2054,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2124e9269285c478a823d85cd6f08a3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2017,6 +2132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: coral_thick (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9f6847b85dc2c45e6bb5e4cc41e7fbd5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2102,6 +2222,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be044ddd4e558458c9be7aeaab4202b4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2176,6 +2301,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pointy_coral (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2124e9269285c478a823d85cd6f08a3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2249,6 +2379,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pointy_coral (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551566260037408089, guid: 4f720cf350a50418eb7785329f9c4224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2328,6 +2463,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028732877229510350, guid: aac33987762e04789856f53aab95d467,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2423,6 +2563,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9f6847b85dc2c45e6bb5e4cc41e7fbd5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2516,6 +2661,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9f6847b85dc2c45e6bb5e4cc41e7fbd5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2611,6 +2761,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9f6847b85dc2c45e6bb5e4cc41e7fbd5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2685,6 +2840,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pointy_coral (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2124e9269285c478a823d85cd6f08a3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2758,6 +2918,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pointy_coral (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551566260037408089, guid: 4f720cf350a50418eb7785329f9c4224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2838,6 +3003,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2124e9269285c478a823d85cd6f08a3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2916,6 +3086,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: basic_coral
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be044ddd4e558458c9be7aeaab4202b4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2996,6 +3171,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6551566260037408089, guid: 4f720cf350a50418eb7785329f9c4224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3070,6 +3250,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pointy_coral
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2124e9269285c478a823d85cd6f08a3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3143,6 +3328,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pointy_coral (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2124e9269285c478a823d85cd6f08a3a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3228,6 +3418,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2028732877229510350, guid: aac33987762e04789856f53aab95d467,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3251,6 +3446,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: blubby_coral (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403094617466047253, guid: 5474c4c37342742c2a3b03348ed95964,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2676143982886877446, guid: 5474c4c37342742c2a3b03348ed95964,
         type: 3}

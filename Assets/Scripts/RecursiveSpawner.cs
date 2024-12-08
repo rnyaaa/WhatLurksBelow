@@ -3,7 +3,7 @@ using UnityEngine;
 public class RecursiveSpawner : MonoBehaviour
 {
     public GameObject modelToSpawn; // Model for segments
-    public GameObject tailModel;    // Model for the tail
+    //public GameObject tailModel;    // Model for the tail
     private GameObject parentSegment; // Reference to the parent segment
     public int iterations = 10;       // Number of iterations
     public float scaleMultiplier = 0.8f; // Factor for size reduction
@@ -14,7 +14,7 @@ public class RecursiveSpawner : MonoBehaviour
     public float maxTurnSpeed = 2f;     // Smooth turning speed
     private Vector3 targetDirection;    // Direction for the head movement
     private float changeDirectionTimer; // Timer for direction changes
-    public bool isTail = false;         // Is this the tail segment?
+    //public bool isTail = false;         // Is this the tail segment?
 
     private int currentIteration = 1;   // Current recursion depth
 
@@ -23,12 +23,12 @@ public class RecursiveSpawner : MonoBehaviour
         // Recursive spawning logic
         if (currentIteration < iterations)
         {
-            SpawnSegment(modelToSpawn, false);
+            SpawnSegment(modelToSpawn);
         }
-        else if (!isTail)
-        {
-            SpawnSegment(tailModel, true);
-        }
+        //else if (!isTail)
+        //{
+        //    SpawnSegment(tailModel, true);
+        //}
 
         // Initialize direction for the head
         if (parentSegment == null)
@@ -49,7 +49,7 @@ public class RecursiveSpawner : MonoBehaviour
         }
     }
 
-    private void SpawnSegment(GameObject model, bool isTailSegment)
+    private void SpawnSegment(GameObject model)
     {
         // Calculate spawn position and scale
         Vector3 newScale = transform.localScale * scaleMultiplier;
@@ -62,7 +62,7 @@ public class RecursiveSpawner : MonoBehaviour
         // Add this script to the spawned segment
         RecursiveSpawner spawner = spawnedModel.AddComponent<RecursiveSpawner>();
         spawner.modelToSpawn = modelToSpawn;
-        spawner.tailModel = tailModel;
+        //spawner.tailModel = tailModel;
         spawner.iterations = iterations;
         spawner.scaleMultiplier = scaleMultiplier;
         spawner.offsetDistance = offsetDistance;
@@ -72,7 +72,7 @@ public class RecursiveSpawner : MonoBehaviour
         spawner.maxTurnSpeed = maxTurnSpeed;
         spawner.currentIteration = currentIteration + 1;
         spawner.parentSegment = gameObject;
-        spawner.isTail = isTailSegment;
+        //spawner.isTail = isTailSegment;
     }
 
     private void FollowParent()

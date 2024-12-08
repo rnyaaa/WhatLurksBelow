@@ -26,7 +26,6 @@ public class GameOverOnCollision : MonoBehaviour
 
     void Update()
     {
-        Debug.Log((enemy.transform.position - transform.position).magnitude);
         if ((enemy.transform.position - transform.position).magnitude < 3f)
         {
             // Fade to black

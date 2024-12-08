@@ -15,7 +15,6 @@ public class SpiderIndividualizedLocomotion : MonoBehaviour
     }
 
     public LegConfig[] legs;
-    private float[] hint_starts;
     
     [Header("Movement Parameters")]
     public float legMoveThreshold = 0.5f;
@@ -31,10 +30,6 @@ public class SpiderIndividualizedLocomotion : MonoBehaviour
         foreach (var leg in legs)
         {
             leg.movementDelay = Random.Range(0f, maxIndividualDelay);
-        }
-        for (int i = 0; i < legs.Length; i++)
-        {
-            hint_starts[i] = legs[i].hint.transform.position.y;
         }
     }
 
