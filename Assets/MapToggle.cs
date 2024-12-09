@@ -31,7 +31,7 @@ public class MapToggleWithCoordinates : MonoBehaviour
     void Update()
     {
         // Toggle map visibility with the 'M' key
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M) || Input.GetKeyDown(KeyCode.Tab))
         {
             isMapVisible = !isMapVisible;
             if (mapCanvas != null)
@@ -42,7 +42,7 @@ public class MapToggleWithCoordinates : MonoBehaviour
             // Adjust player speed based on map visibility
             if (playerScript != null)
             {
-                playerScript.walkSpeed = isMapVisible ? 0 : originalSpeed;
+                playerScript.walkSpeed = (float)(isMapVisible ? 2 : originalSpeed);
             }
         }
 
