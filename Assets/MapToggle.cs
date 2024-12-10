@@ -30,7 +30,7 @@ public class MapToggleWithCoordinates : MonoBehaviour
 
     void Update()
     {
-        // Toggle map visibility with the 'M' key
+        // Toggle map visibility with the 'M' key or 'Tab' key
         if (Input.GetKeyDown(KeyCode.M) || Input.GetKeyDown(KeyCode.Tab))
         {
             isMapVisible = !isMapVisible;
