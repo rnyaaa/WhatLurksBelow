@@ -8,6 +8,7 @@ public class ValveInteraction : MonoBehaviour
     public GameObject player;
     public float range;
     [SerializeField] private Text interactionText;
+    [SerializeField] private Light valvelight;
     public bool finished = false;
     public float rotationSpeed = 2f;
 
@@ -55,5 +56,7 @@ public class ValveInteraction : MonoBehaviour
         }
 
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, targetAngle);
+
+        valvelight.color = Color.green;
     }
 }
