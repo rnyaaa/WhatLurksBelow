@@ -23,6 +23,10 @@ public class EnemyBehavior : MonoBehaviour
     public LayerMask obstacleMask;
     public GameObject enemy;
 
+    public float swayFrequency = 3f;
+
+    public float swayMagnitude = 2f;
+
     private Vector3 direction;
     private Vector3 velocity = new Vector3(0, 0, 0);
     private Vector3 lastValidDirection;
@@ -63,13 +67,16 @@ public class EnemyBehavior : MonoBehaviour
             }
             else
             {
-                if (AvoidObstacles(ref direction))
+                if (!CheckRayToTarget())
                 {
-                    MoveToward(direction);
-                }
-                else
-                {
-                    MoveToward(direction);
+                    if (AvoidObstacles(ref direction))
+                    {
+                        MoveToward(direction);
+                    }
+                    else
+                    {
+                        MoveToward(direction);
+                    }
                 }
             }
         }
@@ -90,7 +97,8 @@ public class EnemyBehavior : MonoBehaviour
         else if (distanceToPlayer <= nearbyRange)
         {
             desiredState = AudioState.Nearby;
-        } else 
+        }
+        else
         {
             desiredState = AudioState.Wandering;
         }
@@ -107,7 +115,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(enemy.transform.position, direction, out hit, maxDistance, obstacleMask))
+        if (Physics.Raycast(enemy.transform.position, direction, out hit, 30, obstacleMask))
         {
             if (!hit.collider.gameObject.CompareTag("TargetLight"))
             {
@@ -121,18 +129,20 @@ public class EnemyBehavior : MonoBehaviour
     bool AvoidObstacles(ref Vector3 currentDirection)
     {
         RaycastHit hit;
-        if (Physics.Raycast(enemy.transform.position, currentDirection, out hit, maxDistance, obstacleMask))
+        float sphereRadius = 2f;
+
+        if (Physics.SphereCast(enemy.transform.position, sphereRadius, currentDirection, out hit, maxDistance, obstacleMask))
         {
             Debug.DrawRay(enemy.transform.position, currentDirection * hit.distance, Color.red);
 
-            Vector3 backtrackDirection = -currentDirection;
-            MoveToward(backtrackDirection * 0.5f);
+            Vector3 backtrackDirection = -currentDirection * 0.5f;
+            MoveToward(backtrackDirection);
 
             Vector3[] directions = GetSurroundingDirections(currentDirection);
 
             foreach (var dir in directions)
             {
-                if (!Physics.Raycast(enemy.transform.position, dir, maxDistance, obstacleMask))
+                if (!Physics.SphereCast(enemy.transform.position, sphereRadius, dir, out hit, maxDistance, obstacleMask))
                 {
                     Debug.DrawRay(enemy.transform.position, dir * maxDistance, Color.green);
                     currentDirection = dir;
@@ -145,25 +155,21 @@ public class EnemyBehavior : MonoBehaviour
 
     Vector3[] GetSurroundingDirections(Vector3 baseDirection)
     {
-        return new Vector3[] 
+        return new Vector3[]
         {
             baseDirection,
             Quaternion.Euler(0, 45, 0) * baseDirection,
             Quaternion.Euler(0, -45, 0) * baseDirection,
+            Quaternion.Euler(45, 0, 0) * baseDirection,
+            Quaternion.Euler(-45, 0, 0) * baseDirection,
+            Quaternion.Euler(0, 77, 0) * baseDirection,
+            Quaternion.Euler(0, -77, 0) * baseDirection,
+            Quaternion.Euler(77, 0, 0) * baseDirection,
+            Quaternion.Euler(-77, 0, 0) * baseDirection,
             Quaternion.Euler(0, 90, 0) * baseDirection,
             Quaternion.Euler(0, -90, 0) * baseDirection,
-            Quaternion.Euler(0, 135, 0) * baseDirection,
-            Quaternion.Euler(0, -135, 0) * baseDirection,
-            Quaternion.Euler(0, 180, 0) * baseDirection,
-            Quaternion.Euler(0, 10, 0) * baseDirection,
-            Quaternion.Euler(0, -10, 0) * baseDirection,
-            Quaternion.Euler(0, 20, 0) * baseDirection,
-            Quaternion.Euler(0, -20, 0) * baseDirection,
-            Quaternion.Euler(0, 30, 0) * baseDirection,
-            Quaternion.Euler(0, -30, 0) * baseDirection,
-            Quaternion.Euler(0, 60, 0) * baseDirection,
-            Quaternion.Euler(0, -60, 0) * baseDirection
-
+            Quaternion.Euler(90, 0, 0) * baseDirection,
+            Quaternion.Euler(-90, 0, 0) * baseDirection
         };
     }
 
@@ -184,12 +190,15 @@ public class EnemyBehavior : MonoBehaviour
             maxRotationSpeed * Time.deltaTime
         );
         dir = dir.normalized;
-        velocity += dir;
-        enemy.transform.position += velocity * moveSpeed * Time.deltaTime;
-        velocity *= 0.99f;
+        Vector3 swayDir = Vector3.Cross(dir, Vector3.up).normalized;
+        float swayAmount = Mathf.Sin(Time.time * swayFrequency) * swayMagnitude;
+
+        Vector3 finalMovement = (dir + swayDir * swayAmount).normalized;
+
+        enemy.transform.position += finalMovement * moveSpeed * Time.deltaTime;
     }
 
-    
+
     void MoveThroughWaypoints()
     {
         Transform target = waypoints[patrolIndex].transform;
@@ -200,7 +209,7 @@ public class EnemyBehavior : MonoBehaviour
             patrolIndex = (patrolIndex + 1) % waypoints.Length;
         }
     }
-    
+
     void MoveTowardWayPoint(Vector3 targetPosition)
     {
         Vector3 directionWP = (targetPosition - transform.position).normalized;
