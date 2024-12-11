@@ -44,7 +44,7 @@ Camera:
   m_GameObject: {fileID: 385214578825931162}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -67,7 +67,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 50
   orthographic: 0
   orthographic size: 5
@@ -118,10 +118,10 @@ MonoBehaviour:
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
-  m_Antialiasing: 0
+  m_Antialiasing: 2
   m_AntialiasingQuality: 2
   m_StopNaN: 0
-  m_Dithering: 0
+  m_Dithering: 1
   m_ClearDepth: 1
   m_AllowXRRendering: 1
   m_AllowHDROutput: 1
@@ -184,7 +184,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.756942, g: 0.76223016, b: 0.8490566, a: 1}
-  m_Intensity: 200
+  m_Intensity: 80
   m_Range: 23.714714
   m_SpotAngle: 55.9375
   m_InnerSpotAngle: 36.073044
@@ -423,6 +423,7 @@ GameObject:
   - component: {fileID: 4471045053631607371}
   - component: {fileID: 3180580416685211106}
   - component: {fileID: 1080392173687243251}
+  - component: {fileID: 1113227553638566037}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -458,7 +459,7 @@ CharacterController:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 65
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -490,7 +491,7 @@ MonoBehaviour:
   mouseSensitivity: 3.5
   walkSpeed: 5
   moveSpeed: 0.95
-  gravity: -1
+  gravity: -4
   moveSmoothTime: 0.3
   mouseSmoothTime: 0.03
   footstepsSound: {fileID: 1936727424673842162}
@@ -606,6 +607,22 @@ MonoBehaviour:
   deathText: {fileID: 0}
   fadeDuration: 1.5
   enemy: {fileID: 0}
+--- !u!114 &1113227553638566037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7665286294888645659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65bb30cb2ee7341e39ad144f7d18fbdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 4936824761680653234}
+  mapCanvas: {fileID: 6440049400388017419, guid: 43d1b56f34f8c466aa91e3b7a9a84dfb,
+    type: 3}
+  coordinatesText: {fileID: 0}
 --- !u!1001 &5955393982871005523
 PrefabInstance:
   m_ObjectHideFlags: 0
