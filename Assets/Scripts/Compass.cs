@@ -34,7 +34,7 @@ public class Compass : MonoBehaviour
     void Update()
     {
         // opens compass with the 'C' key.
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.M) || Input.GetKeyDown(KeyCode.Tab))
         {
             isCompassVisible = !isCompassVisible;
             if (compass != null)
