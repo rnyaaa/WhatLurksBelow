@@ -144,16 +144,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a074ec59f6e910b4e8c49f57e56cf95a, type: 3}
   m_Name: VolumetricFogVolumeComponent
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   distance:
     m_OverrideState: 1
     m_Value: 512
   baseHeight:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 2
   maximumHeight:
     m_OverrideState: 1
-    m_Value: 400
+    m_Value: 1000
   enableGround:
     m_OverrideState: 1
     m_Value: 1
@@ -165,16 +165,16 @@ MonoBehaviour:
     m_Value: 1
   attenuationDistance:
     m_OverrideState: 1
-    m_Value: 8
+    m_Value: 5
   enableMainLightContribution:
     m_OverrideState: 0
     m_Value: 0
   mainLightAnisotropy:
     m_OverrideState: 1
-    m_Value: 0.99
+    m_Value: 0.878
   mainLightScattering:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.041
   mainLightColorTint:
     m_OverrideState: 1
     m_Value: {r: 1, g: 0, b: 0, a: 1}
