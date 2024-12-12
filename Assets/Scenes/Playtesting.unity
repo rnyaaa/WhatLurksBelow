@@ -9135,6 +9135,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1307285089}
     m_Modifications:
+    - target: {fileID: 674415087580307927, guid: f5ded4e26c638fc4da7491fdf303c97a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d9d458ea3d0524e1fa6210473d1528b6, type: 2}
     - target: {fileID: 4999678528053973786, guid: f5ded4e26c638fc4da7491fdf303c97a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9515,7 +9520,7 @@ PrefabInstance:
     - target: {fileID: 7193826537232790023, guid: aad274c011789486480680d075ad644e,
         type: 3}
       propertyPath: m_Text
-      value: Repair the valves on the pipeline and return.
+      value: Find and repair the valves on the pipeline.
       objectReference: {fileID: 0}
     - target: {fileID: 7677084936179361665, guid: aad274c011789486480680d075ad644e,
         type: 3}
