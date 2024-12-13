@@ -600,13 +600,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7665286294888645659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ce52b8ff26e148e7ad55e6b41330339, type: 3}
+  m_Script: {fileID: 11500000, guid: ff659a59f1b734b4bac06d01079ffac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeCanvas: {fileID: 0}
-  deathText: {fileID: 0}
-  fadeDuration: 1.5
-  enemy: {fileID: 0}
+  checkpoints: []
 --- !u!114 &1113227553638566037
 MonoBehaviour:
   m_ObjectHideFlags: 0
