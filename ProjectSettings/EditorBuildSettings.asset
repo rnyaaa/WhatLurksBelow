@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/AlphaMap.unity
-    guid: afe075a7b44904de08ffcd6277c36cbd
+    path: Assets/Scenes/Playtesting.unity
+    guid: 4960a187593624f49b0d80109ebaf361
   m_configObjects: {}
