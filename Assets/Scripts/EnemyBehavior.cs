@@ -16,6 +16,8 @@ public class EnemyBehavior : MonoBehaviour
     public float moveSpeed = 3f;
 
     public Transform[] waypoints;
+    public Transform[] altWaypoints;
+    private bool useAltWaypoints = false;
 
     private int patrolIndex = 0;
 
@@ -201,12 +203,16 @@ public class EnemyBehavior : MonoBehaviour
 
     void MoveThroughWaypoints()
     {
-        Transform target = waypoints[patrolIndex].transform;
+        Transform[] currentWaypoints = useAltWaypoints ? altWaypoints : waypoints;
+
+        if (currentWaypoints.Length == 0) return; // Handle empty waypoints
+
+        Transform target = currentWaypoints[patrolIndex].transform;
         MoveTowardWayPoint(target.position);
 
         if (Vector3.Distance(enemy.transform.position, target.position) < 4f)
         {
-            patrolIndex = (patrolIndex + 1) % waypoints.Length;
+            patrolIndex = (patrolIndex + 1) % currentWaypoints.Length;
         }
     }
 
@@ -228,6 +234,12 @@ public class EnemyBehavior : MonoBehaviour
                 MoveToward(directionWP);
             }
         }
+    }
+
+    public void ActivateAltRoute()
+    {
+        useAltWaypoints = true;
+        patrolIndex = 0;
     }
     private void FadeAudio()
     {
