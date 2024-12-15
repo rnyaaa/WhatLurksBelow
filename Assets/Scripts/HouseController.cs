@@ -9,6 +9,8 @@ public class HouseController : MonoBehaviour
     public GameObject jellyfish;
     public ValveInteraction valve1;
     public ValveInteraction valve2;
+    public GameObject newTerrain;  // Assign the new terrain in the Inspector
+    public GameObject oldTerrain; // Assign the old terrain in the Inspector
     public GameObject Player;
     private AudioSource ambience;
     public Text endingText;
@@ -23,6 +25,7 @@ public class HouseController : MonoBehaviour
         jellyfish.SetActive(false);
         endingText.enabled = false;
         ambience = Player.GetComponent<AudioSource>();
+        newTerrain.SetActive(false);
     }
 
     // Update is called once per frame
@@ -41,8 +44,10 @@ public class HouseController : MonoBehaviour
     {
         house.SetActive(true);  
         jellyfish.SetActive(true);
+        oldTerrain.SetActive(false);
+        newTerrain.SetActive(true);
         endingText.enabled = true;
-        ambience.Stop();
+        ambience.mute = true;
     }
     private IEnumerator EndGame()   
     {
