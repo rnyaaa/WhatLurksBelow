@@ -3260,6 +3260,7 @@ MonoBehaviour:
   finished: 0
   complete: 0
   rotationSpeed: 10
+  valveturning: {fileID: 0}
 --- !u!65 &490713429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5999,6 +6000,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee6c9438f9da47b9a7ce2d27d6ae587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathScreen: {fileID: 3144660901730382602, guid: 4ec7acd9991fb45d2abfa85211d588ee,
+    type: 3}
   enemy: {fileID: 633434233}
   player: {fileID: 1032560745}
 --- !u!1 &1037386942
@@ -14567,6 +14570,7 @@ PrefabInstance:
     - {fileID: 722444053643231587, guid: 252b58cf2306148f999238f166b4ca71, type: 3}
     - {fileID: 7234140604659318218, guid: 252b58cf2306148f999238f166b4ca71, type: 3}
     - {fileID: 4421695951609191645, guid: 252b58cf2306148f999238f166b4ca71, type: 3}
+    - {fileID: 1556095546552040517, guid: 252b58cf2306148f999238f166b4ca71, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3014697027194224517, guid: 252b58cf2306148f999238f166b4ca71,
         type: 3}
