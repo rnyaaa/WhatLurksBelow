@@ -97,7 +97,7 @@ public class SpiderIndividualizedLocomotion : MonoBehaviour
                 // Reset delay for next movement
                 leg.movementDelay = Random.Range(0f, maxIndividualDelay);
 
-                Debug.Log($"Leg {i} started moving. Distance: {distanceToHint}");
+                //Debug.Log($"Leg {i} started moving. Distance: {distanceToHint}");
             }
 
             // Handle ongoing movement
@@ -122,7 +122,7 @@ public class SpiderIndividualizedLocomotion : MonoBehaviour
                 {
                     leg.target.position = leg.targetPosition;
                     leg.isMoving = false;
-                    Debug.Log($"Leg {i} finished moving");
+                    //Debug.Log($"Leg {i} finished moving");
                 }
             }
         }

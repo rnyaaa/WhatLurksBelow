@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CheckpointManager : MonoBehaviour
 {
-    public Transform[] checkpoints; // List of all checkpoints
-    private Transform currentCheckpoint; // Current active checkpoint
+    public Transform[] checkpoints;
+    private Transform currentCheckpoint;
 
     void Start()
     {
         if (checkpoints.Length > 0)
         {
-            currentCheckpoint = checkpoints[0]; // Start at the first checkpoint by default
+            currentCheckpoint = checkpoints[0];
         }
     }
 
