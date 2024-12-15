@@ -10,13 +10,14 @@ public class ValveInteraction : MonoBehaviour
     [SerializeField] private Text interactionText;
     [SerializeField] private Light valvelight;
     public bool finished = false;
+    public bool complete = false;
     public float rotationSpeed = 2f;
 
     void Update()
     {
         if ((player.transform.position - transform.position).magnitude < range)
         {
-            if (!finished)
+            if (!complete)
             {
                 interactionText.gameObject.SetActive(true);
 
@@ -24,6 +25,7 @@ public class ValveInteraction : MonoBehaviour
                 {
                     interactionText.gameObject.SetActive(false);
                     FixValve();
+                    complete = true;
                 }
             }
         }
