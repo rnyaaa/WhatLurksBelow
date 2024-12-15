@@ -13,7 +13,6 @@ public class BellInteraction : MonoBehaviour
     [SerializeField] private Text controlsText;
 
     [SerializeField] private Text startText;
-    [SerializeField] private Text finishText;
     public GameObject valveObject;
     private bool game_finished = false;
 
@@ -32,17 +31,14 @@ public class BellInteraction : MonoBehaviour
                 warningText.gameObject.SetActive(false);
                 controlsText.gameObject.SetActive(false);
                 startText.gameObject.SetActive(false);
-                finishText.gameObject.SetActive(true);
                 if (Input.GetKeyDown("e"))
                 {
-                    finishText.gameObject.SetActive(false);
                     game_finished = true;
                 }
             }
         }
         else
         {
-            finishText.gameObject.SetActive(false);
             startText.gameObject.SetActive(false);
             warningText.gameObject.SetActive(false);
             controlsText.gameObject.SetActive(false);
