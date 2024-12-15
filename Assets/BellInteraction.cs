@@ -7,6 +7,11 @@ public class BellInteraction : MonoBehaviour
 {
     public GameObject player;
     public float range;
+
+    [SerializeField] private Text warningText;
+
+    [SerializeField] private Text controlsText;
+
     [SerializeField] private Text startText;
     [SerializeField] private Text finishText;
     public GameObject valveObject;
@@ -19,9 +24,13 @@ public class BellInteraction : MonoBehaviour
         {
             if (!valve.finished)
             {
+                warningText.gameObject.SetActive(true);
+                controlsText.gameObject.SetActive(true);
                 startText.gameObject.SetActive(true);
 
             }else{
+                warningText.gameObject.SetActive(false);
+                controlsText.gameObject.SetActive(false);
                 startText.gameObject.SetActive(false);
                 finishText.gameObject.SetActive(true);
                 if (Input.GetKeyDown("e"))
@@ -35,6 +44,8 @@ public class BellInteraction : MonoBehaviour
         {
             finishText.gameObject.SetActive(false);
             startText.gameObject.SetActive(false);
+            warningText.gameObject.SetActive(false);
+            controlsText.gameObject.SetActive(false);
         }
     }
 }
