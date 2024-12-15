@@ -17,6 +17,7 @@ public class HouseController : MonoBehaviour
     private AudioSource footstepsSound;
     public Text endingText;
     public Image image;
+    public bool debugfinish = false;
     public Canvas creditsCanvas; // Add reference to the credits canvas
     private Animator creditsAnimator; // Add reference to the Animator on the credits canvas
     public float fadeDistance = 5;
@@ -45,6 +46,11 @@ public class HouseController : MonoBehaviour
             float distance = Vector3.Distance(Player.transform.position, house.transform.position);
             if (distance <= fadeDistance)
                 StartCoroutine(EndGame());
+        }
+
+        if(debugfinish)
+        {
+            StartCoroutine(EndGame());
         }
     }
 
@@ -92,11 +98,7 @@ public class HouseController : MonoBehaviour
             canvasGroup.alpha = Mathf.Clamp01(fadeStart / fadeDuration);
             yield return null;
         }
-
-        // Start the credits animation
-        if (creditsAnimator != null)
-        {
-            creditsAnimator.enabled = true; // Assumes an animator trigger called "StartCredits"
-        }
+        
+        creditsCanvas.gameObject.SetActive(true);
     }
 }
