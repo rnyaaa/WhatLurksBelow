@@ -119,7 +119,7 @@ public class EnemyBehavior : MonoBehaviour
 
         if (Physics.Raycast(enemy.transform.position, direction, out hit, 30, obstacleMask))
         {
-            if (!hit.collider.gameObject.CompareTag("TargetLight"))
+            if (!hit.collider.gameObject.CompareTag("Player"))
             {
                 return false;
             }
@@ -192,10 +192,11 @@ public class EnemyBehavior : MonoBehaviour
             maxRotationSpeed * Time.deltaTime
         );
         dir = dir.normalized;
-        Vector3 swayDir = Vector3.Cross(dir, Vector3.up).normalized;
-        float swayAmount = Mathf.Sin(Time.time * swayFrequency) * swayMagnitude;
+        Vector3 swayDir = Vector3.Cross(dir, Mathf.Abs(dir.y) > 0.99f ? Vector3.forward : Vector3.up).normalized;
 
-        Vector3 finalMovement = (dir + swayDir * swayAmount).normalized;
+        float swayAmount = Mathf.Sin(Time.time * swayFrequency * Mathf.PI) * swayMagnitude;
+
+        Vector3 finalMovement = dir * moveSpeed + swayDir * swayAmount;
 
         enemy.transform.position += finalMovement * moveSpeed * Time.deltaTime;
     }
