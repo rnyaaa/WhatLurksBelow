@@ -13154,12 +13154,20 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 7177780891738633112, guid: f41c6c21faa64465b8814ab8a71d1a88,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7665286294888645659, guid: f41c6c21faa64465b8814ab8a71d1a88,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7177780891738633112, guid: f41c6c21faa64465b8814ab8a71d1a88, type: 3}
+    - {fileID: 4514870451986514781, guid: f41c6c21faa64465b8814ab8a71d1a88, type: 3}
+    - {fileID: 1113227553638566037, guid: f41c6c21faa64465b8814ab8a71d1a88, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 708770395855981936, guid: f41c6c21faa64465b8814ab8a71d1a88,
@@ -14580,6 +14588,7 @@ PrefabInstance:
     - {fileID: 722444053643231587, guid: 252b58cf2306148f999238f166b4ca71, type: 3}
     - {fileID: 7234140604659318218, guid: 252b58cf2306148f999238f166b4ca71, type: 3}
     - {fileID: 4421695951609191645, guid: 252b58cf2306148f999238f166b4ca71, type: 3}
+    - {fileID: 1556095546552040517, guid: 252b58cf2306148f999238f166b4ca71, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3014697027194224517, guid: 252b58cf2306148f999238f166b4ca71,
         type: 3}
