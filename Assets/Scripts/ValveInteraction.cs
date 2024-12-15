@@ -25,8 +25,8 @@ public class ValveInteraction : MonoBehaviour
                 if (Input.GetKeyDown("e"))
                 {
                     interactionText.gameObject.SetActive(false);
-                    FixValve();
                     complete = true;
+                    StartCoroutine(RotateValve());
                 }
             }
         }
@@ -36,15 +36,18 @@ public class ValveInteraction : MonoBehaviour
         }
     }
 
-
-    void FixValve()
-    {
-        StartCoroutine(RotateValve());
-    }
-
     private IEnumerator RotateValve()   
     {
-        valveturning.Play();
+        Debug.Log("FIXING");
+        if (valveturning != null)
+        {
+            valveturning.Play();
+        }
+        else
+        {
+            Debug.LogError("AudioSource 'valveturning' is not assigned in the Inspector!");
+        }
+
         float targetAngle = transform.localEulerAngles.z + 90f;
         float currentAngle = transform.localEulerAngles.z;
         float elapsedTime = 0f;

@@ -44,7 +44,7 @@ public class WanderBehavior : MonoBehaviour
         Vector2 randomPoint = Random.insideUnitCircle * wanderRadius;
         currentTarget = startPosition + new Vector3(randomPoint.x, 0, randomPoint.y);
 
-        Debug.Log($"New target generated: {currentTarget}");
+        //Debug.Log($"New target generated: {currentTarget}");
     }
 
     private void MoveTowardsTarget()

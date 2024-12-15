@@ -14,6 +14,7 @@ public class Bonefish : MonoBehaviour
     public float movementSpeed = 5f;    // Speed for the head's movement
     public float changeDirectionInterval = 3f; // Direction change interval
     public float maxTurnSpeed = 2f;     // Smooth turning speed
+    public float maxWanderRadius = 20f; // Maximum allowed distance from the start
 
     private Vector3 targetDirection;    // Direction for the head movement
     private float changeDirectionTimer; // Timer for direction changes
@@ -23,9 +24,12 @@ public class Bonefish : MonoBehaviour
     private bool playerDetected = false; // Whether the player is detected
     private Transform playerTransform;  // Reference to the player's transform
     private float groundHeight;         // Height of the ground beneath the object
+    private Vector3 startingPosition;   // Initial position of the Bonefish
 
     void Start()
     {
+        startingPosition = transform.position; // Store the starting position
+
         // Recursive spawning logic
         if (currentIteration < iterations)
         {
@@ -84,23 +88,20 @@ public class Bonefish : MonoBehaviour
         spawner.movementSpeed = movementSpeed;
         spawner.changeDirectionInterval = changeDirectionInterval;
         spawner.maxTurnSpeed = maxTurnSpeed;
+        spawner.maxWanderRadius = maxWanderRadius;
         spawner.currentIteration = currentIteration + 1;
         spawner.parentSegment = gameObject;
     }
 
     private void FollowParent()
     {
-        // Smoothly move toward parent's position
         Vector3 targetPosition = parentSegment.transform.position - parentSegment.transform.forward * offsetDistance;
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * followSpeed);
-
-        // Smoothly rotate to match parent's rotation
         transform.rotation = Quaternion.Lerp(transform.rotation, parentSegment.transform.rotation, Time.deltaTime * followSpeed);
     }
 
     private void MoveRandomly()
     {
-        // Update the timer for direction change
         changeDirectionTimer += Time.deltaTime;
 
         if (changeDirectionTimer >= changeDirectionInterval)
@@ -109,7 +110,6 @@ public class Bonefish : MonoBehaviour
             changeDirectionTimer = 0f;
         }
 
-        // Raycast setup for terrain height check
         LayerMask terrainLayer = LayerMask.GetMask("Terrain");
         RaycastHit hit;
 
@@ -118,7 +118,14 @@ public class Bonefish : MonoBehaviour
             groundHeight = hit.point.y;
         }
 
-        // Smoothly rotate and move in the random direction
+        // Ensure Bonefish stays within the maximum wander radius
+        Vector3 displacementFromStart = transform.position - startingPosition;
+        if (displacementFromStart.magnitude > maxWanderRadius)
+        {
+            // Adjust direction to move back toward the starting position
+            targetDirection = (startingPosition - transform.position).normalized;
+        }
+
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * maxTurnSpeed);
         transform.position += transform.forward * movementSpeed * Time.deltaTime;
@@ -128,7 +135,6 @@ public class Bonefish : MonoBehaviour
     {
         if (!player) return;
 
-        // Check if the flashlight is on
         Transform flashlight = player.transform.Find("Camera/Flashlight");
         if (!flashlight || !flashlight.gameObject.activeSelf)
         {
@@ -136,7 +142,6 @@ public class Bonefish : MonoBehaviour
             return;
         }
 
-        // Check distance to the player
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
         if (distanceToPlayer <= detectionRange)
         {
@@ -153,30 +158,27 @@ public class Bonefish : MonoBehaviour
     {
         if (!playerTransform) return;
 
-        // Rotate to face the player
         Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(directionToPlayer);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * maxTurnSpeed);
 
-        // Slowly rise to the target height above the ground
         Vector3 targetPosition = new Vector3(transform.position.x, groundHeight + targetHeight, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * raiseSpeed);
     }
 
     private void ChangeDirection()
     {
-        // Generate a new random direction
         targetDirection = new Vector3(
             Random.Range(-1f, 1f),
             Random.Range(-1f, 1f),
             Random.Range(-1f, 1f)
         ).normalized;
-        if(groundHeight > 3f)
+
+        // Adjust direction if near the edge of the allowed radius
+        Vector3 displacementFromStart = transform.position - startingPosition;
+        if (displacementFromStart.magnitude > maxWanderRadius * 0.9f)
         {
-            targetDirection.z -= 0.5f;
-        } else if (groundHeight < 1.5f)
-        {
-            targetDirection.z += 2f;
+            targetDirection = (startingPosition - transform.position).normalized;
         }
     }
 }

@@ -45,7 +45,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 200
+  m_Intensity: 40
   m_Range: 10
   m_SpotAngle: 103.29668
   m_InnerSpotAngle: 72.02388
@@ -225,6 +225,7 @@ MonoBehaviour:
   movementSpeed: 1
   changeDirectionInterval: 3
   maxTurnSpeed: 1
+  maxWanderRadius: 20
 --- !u!4 &586550084908914432 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a741c831b486e49dfbf4a2a51c02bc47,
