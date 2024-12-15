@@ -12,6 +12,7 @@ public class ValveInteraction : MonoBehaviour
     public bool finished = false;
     public bool complete = false;
     public float rotationSpeed = 2f;
+    public AudioSource valveturning;
 
     void Update()
     {
@@ -43,6 +44,7 @@ public class ValveInteraction : MonoBehaviour
 
     private IEnumerator RotateValve()   
     {
+        valveturning.Play();
         float targetAngle = transform.localEulerAngles.z + 90f;
         float currentAngle = transform.localEulerAngles.z;
         float elapsedTime = 0f;

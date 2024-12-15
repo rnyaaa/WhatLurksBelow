@@ -5,7 +5,6 @@ public class MapToggleWithCoordinates : MonoBehaviour
 {
     public Transform player;         // Reference to the player object
     public Canvas mapCanvas;         // Reference to the map canvas
-    public Text coordinatesText;     // Reference to the Text for coordinates and direction
     private Player playerScript;     // Reference to the Player movement script
     private float originalSpeed;
     private bool isMapVisible = false; // Track the visibility state of the map
@@ -47,17 +46,11 @@ public class MapToggleWithCoordinates : MonoBehaviour
         }
 
         // Update coordinates and direction when the map is visible
-        if (isMapVisible && player != null && coordinatesText != null)
+        if (isMapVisible && player != null)
         {
 
             Vector3 position = player.position;
-
-            int roundedX = Mathf.RoundToInt(position.x);
-            int roundedZ = Mathf.RoundToInt(position.z);
-
             string direction = GetFacingDirection(player.forward);
-
-            coordinatesText.text = $"Coordinates: X = {roundedX}, Z = {roundedZ} | Facing: {direction}";
         }
     }
 
