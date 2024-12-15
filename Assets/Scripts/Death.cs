@@ -6,9 +6,7 @@ using System.Collections.Generic;
 
 public class GameOverOnCollision : MonoBehaviour
 {
-    //public CanvasGroup fadeCanvas; // Reference to a UI Canvas Group for fading
-    //public Text deathText;         // Reference to a UI Text element
-    //public float fadeDuration = 1.5f; // Time it takes to fade to black
+    public GameObject deathScreen;
     public GameObject enemy;
     private bool isGameOver = false;
     //private float fadeTimer = 0f;
@@ -16,14 +14,7 @@ public class GameOverOnCollision : MonoBehaviour
 
     void Start()
     {
-        //if (fadeCanvas != null)
-        //{
-            //fadeCanvas.alpha = 0;
-        //}
-        //if (deathText != null)
-        //{
-            //deathText.enabled = false;
-        //}
+        deathScreen.SetActive(false);
     }
 
     void Update()
@@ -33,13 +24,18 @@ public class GameOverOnCollision : MonoBehaviour
             isGameOver = true;
             StartCoroutine(HandleGameOver());
         }
+        if (isGameOver && Input.GetKeyDown("space"))
+            StartCoroutine(ResetPosition());
     }
 
     private IEnumerator HandleGameOver()
     {
+        deathScreen.SetActive(true);
 
-        yield return null;
-
+        yield break;
+    }
+    private IEnumerator ResetPosition()
+    {
         Transform checkpoint = FindObjectOfType<CheckpointManager>()?.GetCurrentCheckpoint();
         if (checkpoint == null)
         {
@@ -61,8 +57,10 @@ public class GameOverOnCollision : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
 
-        player.transform.position = checkpoint.position;
-        yield return new WaitForSeconds(0.1f);
+        // player.transform.position = checkpoint.position;
+        // yield return new WaitForSeconds(0.1f);
         isGameOver = false;
+
+        deathScreen.SetActive(false);
     }
 }
