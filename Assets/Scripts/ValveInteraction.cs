@@ -23,7 +23,6 @@ public class ValveInteraction : MonoBehaviour
                 if (Input.GetKeyDown("e"))
                 {
                     interactionText.gameObject.SetActive(false);
-                    finished = true;
                     FixValve();
                 }
             }
@@ -58,5 +57,6 @@ public class ValveInteraction : MonoBehaviour
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, targetAngle);
 
         valvelight.color = Color.green;
+        finished = true;
     }
 }
