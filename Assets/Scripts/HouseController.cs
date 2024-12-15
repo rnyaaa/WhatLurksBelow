@@ -13,6 +13,8 @@ public class HouseController : MonoBehaviour
     public GameObject oldTerrain; // Assign the old terrain in the Inspector
     public GameObject Player;
     private AudioSource ambience;
+    private Player player_script;
+    private AudioSource footstepsSound;
     public Text endingText;
     public Image image;
     public float fadeDistance = 5;
@@ -25,6 +27,8 @@ public class HouseController : MonoBehaviour
         jellyfish.SetActive(false);
         endingText.enabled = false;
         ambience = Player.GetComponent<AudioSource>();
+        player_script = Player.GetComponent<Player>();
+        footstepsSound = Player.transform.Find("Footsteps").GetComponent<AudioSource>();
         newTerrain.SetActive(false);
     }
 
@@ -48,9 +52,12 @@ public class HouseController : MonoBehaviour
         newTerrain.SetActive(true);
         endingText.enabled = true;
         ambience.mute = true;
+        footstepsSound.mute = true;
+        player_script.walkSpeed = 1f;
     }
     private IEnumerator EndGame()   
     {
+        player_script.walkSpeed = 0f;
         float fadeStart = 0;
         Color imageColor = image.color;
         while (fadeStart < fadeDuration)

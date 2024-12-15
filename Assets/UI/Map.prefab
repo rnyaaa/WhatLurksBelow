@@ -229,7 +229,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   mapCanvas: {fileID: 6440049400388017419}
-  coordinatesText: {fileID: 6721725958564099586}
 --- !u!1 &6455888716843606751
 GameObject:
   m_ObjectHideFlags: 0
