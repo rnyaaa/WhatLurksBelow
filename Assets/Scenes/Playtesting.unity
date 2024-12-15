@@ -6575,6 +6575,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5713907809540597034, guid: 0ce94a47bda204a61bd88391c2ed59ae,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713907809540597034, guid: 0ce94a47bda204a61bd88391c2ed59ae,
+        type: 3}
       propertyPath: m_TerrainData
       value: 
       objectReference: {fileID: 15600000, guid: e077c98a6776348d3a44fd10cd8eeb93,
@@ -9327,6 +9332,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 600266379100561183, guid: 4ca19cdc4be164ff1ae4a43017253fd2,
+        type: 3}
+      propertyPath: m_DetailObjectDistance
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 1644055274047262218, guid: 4ca19cdc4be164ff1ae4a43017253fd2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13144,12 +13154,20 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 7177780891738633112, guid: f41c6c21faa64465b8814ab8a71d1a88,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7665286294888645659, guid: f41c6c21faa64465b8814ab8a71d1a88,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7177780891738633112, guid: f41c6c21faa64465b8814ab8a71d1a88, type: 3}
+    - {fileID: 4514870451986514781, guid: f41c6c21faa64465b8814ab8a71d1a88, type: 3}
+    - {fileID: 1113227553638566037, guid: f41c6c21faa64465b8814ab8a71d1a88, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 708770395855981936, guid: f41c6c21faa64465b8814ab8a71d1a88,
@@ -15064,6 +15082,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3218279959157059565, guid: 0839df2d37d734db78f31da9602c0954,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3218279959157059565, guid: 0839df2d37d734db78f31da9602c0954,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8633865217861874257, guid: 0839df2d37d734db78f31da9602c0954,
         type: 3}
